@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Periodic Table Accessible Search</title>
+<style>
+/* Set the background color for the entire page or the container holding the search options */
+body, #container {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the search and speech buttons */
+#searchButton, #speechButton {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  border: 2px solid white;
+  font-size: 24px;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#searchButton:hover, #speechButton:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+  <h1>Periodic Table Accessible Search</h1>
+  <h6><a href="http://go-from-here.com/">Go-From-Here.com</a></h6>
+  <section aria-label="User Instructions">
+    <h3>User Instructions</h3>
+    <p>This webpage allows you to search for elements in the Periodic Table.</p>
+    <ul>
+      <li><strong>Voice Search:</strong> Click "Search by Speech" and say the name of an element you want to search.</li>
+      <li><strong>Search Bar:</strong> Enter an element's symbol, name, atomic number, or atomic mass. Press the "Search" button to filter the results. When searching for an element name you search suggestions will pop up after you type 3 letters.</li>
+    </ul>
+    
+    <p>After performing a search, the page will automatically scroll to display the matching elements.</p>
+  </section>
+
+  <!-- Voice Search Button -->
+  <button id="speechButton" aria-label="Search by Speech">Search by Speech</button>
+  <br><br>
+  <!-- Search Bar -->
+  <label for="searchInput">Search:</label>
+  <input type="text" id="searchInput" list="autocomplete" aria-label="Search by Symbol, Element Name, Atomic Number, or Atomic Mass">
+  <datalist id="autocomplete"></datalist>
+  <button id="searchButton" aria-label="Search">Search</button>
+  
+  <div id="sortOptions">
+    <p>Sort by:
+        <a href="#" id="sortByCategory">Category</a> |
+        <a href="#" id="sortByGroup">Group</a> |
+        <a href="#" id="sortByPeriod">Period</a>
+    </p>
+    <div id="filterOptions" style="display: none;">
+        <!-- Filter options will be populated here -->
+    </div>
+</div>
+
+  <!-- Periodic Table Data -->
+  <div id="periodicElements">
+    <!-- Elements data will be placed here -->
+
+  <!-- Periodic Table Data -->
+<div id="periodicElements">
+  <!-- Hydrogen -->
+  <section id="Hydrogen" aria-label="Hydrogen Information">
+    <h2>Hydrogen</h2>
+    <p>Symbol: H</p>
+    <p>Atomic Number: 1</p>
+    <p>Atomic Mass: 1.008</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 1</p>
+    <p>Period: 1</p>
+    <p>Density: 0.00008</p>
+    <p>Melting Point: -259.16°C</p>
+    <p>Boiling Point: -252.879°C</p>
+  </section>
+
+  <!-- Helium -->
+  <section id="Helium" aria-label="Helium Information">
+    <h2>Helium</h2>
+    <p>Symbol: He</p>
+    <p>Atomic Number: 2</p>
+    <p>Atomic Mass: 4.002602</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 1</p>
+    <p>Density: 0.0001786</p>
+    <p>Melting Point: -272.2°C</p>
+    <p>Boiling Point: -268.93°C</p>
+  </section>
+
+  <!-- Lithium -->
+  <section id="Lithium" aria-label="Lithium Information">
+    <h2>Lithium</h2>
+    <p>Symbol: Li</p>
+    <p>Atomic Number: 3</p>
+    <p>Atomic Mass: 6.94</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 2</p>
+    <p>Density: 0.534</p>
+    <p>Melting Point: 180.54°C</p>
+    <p>Boiling Point: 1330°C</p>
+  </section>
+
+  <!-- Beryllium -->
+  <section id="Beryllium" aria-label="Beryllium Information">
+    <h2>Beryllium</h2>
+    <p>Symbol: Be</p>
+    <p>Atomic Number: 4</p>
+    <p>Atomic Mass: 9.0122</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 2</p>
+    <p>Density: 1.85</p>
+    <p>Melting Point: 1287°C</p>
+    <p>Boiling Point: 2469°C</p>
+  </section>
+
+  <!-- Boron -->
+  <section id="Boron" aria-label="Boron Information">
+    <h2>Boron</h2>
+    <p>Symbol: B</p>
+    <p>Atomic Number: 5</p>
+    <p>Atomic Mass: 10.81</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 13</p>
+    <p>Period: 2</p>
+    <p>Density: 2.34</p>
+    <p>Melting Point: 2076°C</p>
+    <p>Boiling Point: 3927°C</p>
+  </section>
+
+  <!-- Carbon -->
+  <section id="Carbon" aria-label="Carbon Information">
+    <h2>Carbon</h2>
+    <p>Symbol: C</p>
+    <p>Atomic Number: 6</p>
+    <p>Atomic Mass: 12.01</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 14</p>
+    <p>Period: 2</p>
+    <p>Density: 2.267</p>
+    <p>Melting Point: Sublimation</p>
+    <p>Boiling Point: Sublimation</p>
+  </section>
+
+  <!-- Nitrogen -->
+  <section id="Nitrogen" aria-label="Nitrogen Information">
+    <h2>Nitrogen</h2>
+    <p>Symbol: N</p>
+    <p>Atomic Number: 7</p>
+    <p>Atomic Mass: 14.007</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 15</p>
+    <p>Period: 2</p>
+    <p>Density: 0.0012506</p>
+    <p>Melting Point: -210.00°C</p>
+    <p>Boiling Point: -195.79°C</p>
+  </section>
+
+  <!-- Oxygen -->
+  <section id="Oxygen" aria-label="Oxygen Information">
+    <h2>Oxygen</h2>
+    <p>Symbol: O</p>
+    <p>Atomic Number: 8</p>
+    <p>Atomic Mass: 15.999</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 16</p>
+    <p>Period: 2</p>
+    <p>Density: 0.001429</p>
+    <p>Melting Point: -218.79°C</p>
+    <p>Boiling Point: -183.0°C</p>
+  </section>
+
+  <!-- Fluorine -->
+  <section id="Fluorine" aria-label="Fluorine Information">
+    <h2>Fluorine</h2>
+    <p>Symbol: F</p>
+    <p>Atomic Number: 9</p>
+    <p>Atomic Mass: 18.998403163</p>
+    <p>Category: Halogen</p>
+    <p>Group: 17</p>
+    <p>Period: 2</p>
+    <p>Density: 0.001696</p>
+    <p>Melting Point: -219.67°C</p>
+    <p>Boiling Point: -188.11°C</p>
+  </section>
+
+  <!-- Neon -->
+  <section id="Neon" aria-label="Neon Information">
+    <h2>Neon</h2>
+    <p>Symbol: Ne</p>
+    <p>Atomic Number: 10</p>
+    <p>Atomic Mass: 20.1797</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 2</p>
+    <p>Density: 0.0008999</p>
+    <p>Melting Point: -248.59°C</p>
+    <p>Boiling Point: -246.046°C</p>
+  </section>
+
+  <!-- Sodium -->
+  <section id="Sodium" aria-label="Sodium Information">
+    <h2>Sodium</h2>
+    <p>Symbol: Na</p>
+    <p>Atomic Number: 11</p>
+    <p>Atomic Mass: 22.98976928</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 3</p>
+    <p>Density: 0.971</p>
+    <p>Melting Point: 97.72°C</p>
+    <p>Boiling Point: 882.9°C</p>
+  </section>
+
+  <!-- Magnesium -->
+  <section id="Magnesium" aria-label="Magnesium Information">
+    <h2>Magnesium</h2>
+    <p>Symbol: Mg</p>
+    <p>Atomic Number: 12</p>
+    <p>Atomic Mass: 24.305</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 3</p>
+    <p>Density: 1.738</p>
+    <p>Melting Point: 650°C</p>
+    <p>Boiling Point: 1091°C</p>
+  </section>
+
+  <!-- Aluminum -->
+  <section id="Aluminum" aria-label="Aluminum Information">
+    <h2>Aluminum</h2>
+    <p>Symbol: Al</p>
+    <p>Atomic Number: 13</p>
+    <p>Atomic Mass: 26.9815386</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 13</p>
+    <p>Period: 3</p>
+    <p>Density: 2.70</p>
+    <p>Melting Point: 660.32°C</p>
+    <p>Boiling Point: 2519°C</p>
+  </section>
+
+  <!-- Silicon -->
+  <section id="Silicon" aria-label="Silicon Information">
+    <h2>Silicon</h2>
+    <p>Symbol: Si</p>
+    <p>Atomic Number: 14</p>
+    <p>Atomic Mass: 28.085</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 14</p>
+    <p>Period: 3</p>
+    <p>Density: 2.3290</p>
+    <p>Melting Point: 1414°C</p>
+    <p>Boiling Point: 3265°C</p>
+  </section>
+
+  <!-- Phosphorus -->
+  <section id="Phosphorus" aria-label="Phosphorus Information">
+    <h2>Phosphorus</h2>
+    <p>Symbol: P</p>
+    <p>Atomic Number: 15</p>
+    <p>Atomic Mass: 30.973761998</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 15</p>
+    <p>Period: 3</p>
+    <p>Density: 1.82</p>
+    <p>Melting Point: 44.15°C</p>
+    <p>Boiling Point: 280.5°C</p>
+  </section>
+
+  <!-- Sulfur -->
+  <section id="Sulfur" aria-label="Sulfur Information">
+    <h2>Sulfur</h2>
+    <p>Symbol: S</p>
+    <p>Atomic Number: 16</p>
+    <p>Atomic Mass: 32.06</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 16</p>
+    <p>Period: 3</p>
+    <p>Density: 2.067</p>
+    <p>Melting Point: 115.21°C</p>
+    <p>Boiling Point: 444.6°C</p>
+  </section>
+
+  <!-- Chlorine -->
+  <section id="Chlorine" aria-label="Chlorine Information">
+    <h2>Chlorine</h2>
+    <p>Symbol: Cl</p>
+    <p>Atomic Number: 17</p>
+    <p>Atomic Mass: 35.45</p>
+    <p>Category: Halogen</p>
+    <p>Group: 17</p>
+    <p>Period: 3</p>
+    <p>Density: 0.003214</p>
+    <p>Melting Point: -101.5°C</p>
+    <p>Boiling Point: -34.04°C</p>
+  </section>
+
+  <!-- Argon -->
+  <section id="Argon" aria-label="Argon Information">
+    <h2>Argon</h2>
+    <p>Symbol: Ar</p>
+    <p>Atomic Number: 18</p>
+    <p>Atomic Mass: 39.948</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 3</p>
+    <p>Density: 0.0017837</p>
+    <p>Melting Point: -189.34°C</p>
+    <p>Boiling Point: -185.85°C</p>
+  </section>
+
+  <!-- Potassium -->
+  <section id="Potassium" aria-label="Potassium Information">
+    <h2>Potassium</h2>
+    <p>Symbol: K</p>
+    <p>Atomic Number: 19</p>
+    <p>Atomic Mass: 39.0983</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 4</p>
+    <p>Density: 0.862</p>
+    <p>Melting Point: 63.38°C</p>
+    <p>Boiling Point: 759°C</p>
+  </section>
+
+  <!-- Calcium -->
+  <section id="Calcium" aria-label="Calcium Information">
+    <h2>Calcium</h2>
+    <p>Symbol: Ca</p>
+    <p>Atomic Number: 20</p>
+    <p>Atomic Mass: 40.078</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 4</p>
+    <p>Density: 1.55</p>
+    <p>Melting Point: 842°C</p>
+    <p>Boiling Point: 1484°C</p>
+  </section>
+  <!-- Scandium -->
+  <section id="Scandium" aria-label="Scandium Information">
+    <h2>Scandium</h2>
+    <p>Symbol: Sc</p>
+    <p>Atomic Number: 21</p>
+    <p>Atomic Mass: 44.955908</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 3</p>
+    <p>Period: 4</p>
+    <p>Density: 2.985</p>
+    <p>Melting Point: 1541°C</p>
+    <p>Boiling Point: 2836°C</p>
+  </section>
+
+  <!-- Titanium -->
+  <section id="Titanium" aria-label="Titanium Information">
+    <h2>Titanium</h2>
+    <p>Symbol: Ti</p>
+    <p>Atomic Number: 22</p>
+    <p>Atomic Mass: 47.867</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 4</p>
+    <p>Period: 4</p>
+    <p>Density: 4.506</p>
+    <p>Melting Point: 1668°C</p>
+    <p>Boiling Point: 3287°C</p>
+  </section>
+
+  <!-- Vanadium -->
+  <section id="Vanadium" aria-label="Vanadium Information">
+    <h2>Vanadium</h2>
+    <p>Symbol: V</p>
+    <p>Atomic Number: 23</p>
+    <p>Atomic Mass: 50.9415</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 5</p>
+    <p>Period: 4</p>
+    <p>Density: 6.0</p>
+    <p>Melting Point: 1910°C</p>
+    <p>Boiling Point: 3407°C</p>
+  </section>
+
+  <!-- Chromium -->
+  <section id="Chromium" aria-label="Chromium Information">
+    <h2>Chromium</h2>
+    <p>Symbol: Cr</p>
+    <p>Atomic Number: 24</p>
+    <p>Atomic Mass: 51.9961</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 6</p>
+    <p>Period: 4</p>
+    <p>Density: 7.19</p>
+    <p>Melting Point: 1907°C</p>
+    <p>Boiling Point: 2671°C</p>
+  </section>
+
+  <!-- Manganese -->
+  <section id="Manganese" aria-label="Manganese Information">
+    <h2>Manganese</h2>
+    <p>Symbol: Mn</p>
+    <p>Atomic Number: 25</p>
+    <p>Atomic Mass: 54.938044</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 7</p>
+    <p>Period: 4</p>
+    <p>Density: 7.21</p>
+    <p>Melting Point: 1246°C</p>
+    <p>Boiling Point: 2061°C</p>
+  </section>
+
+  <!-- Iron -->
+  <section id="Iron" aria-label="Iron Information">
+    <h2>Iron</h2>
+    <p>Symbol: Fe</p>
+    <p>Atomic Number: 26</p>
+    <p>Atomic Mass: 55.845</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 8</p>
+    <p>Period: 4</p>
+    <p>Density: 7.874</p>
+    <p>Melting Point: 1538°C</p>
+    <p>Boiling Point: 2862°C</p>
+  </section>
+
+  <!-- Cobalt -->
+  <section id="Cobalt" aria-label="Cobalt Information">
+    <h2>Cobalt</h2>
+    <p>Symbol: Co</p>
+    <p>Atomic Number: 27</p>
+    <p>Atomic Mass: 58.933194</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 9</p>
+    <p>Period: 4</p>
+    <p>Density: 8.86</p>
+    <p>Melting Point: 1495°C</p>
+    <p>Boiling Point: 2927°C</p>
+  </section>
+
+  <!-- Nickel -->
+  <section id="Nickel" aria-label="Nickel Information">
+    <h2>Nickel</h2>
+    <p>Symbol: Ni</p>
+    <p>Atomic Number: 28</p>
+    <p>Atomic Mass: 58.6934</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 10</p>
+    <p>Period: 4</p>
+    <p>Density: 8.912</p>
+    <p>Melting Point: 1455°C</p>
+    <p>Boiling Point: 2730°C</p>
+  </section>
+
+  <!-- Copper -->
+  <section id="Copper" aria-label="Copper Information">
+    <h2>Copper</h2>
+    <p>Symbol: Cu</p>
+    <p>Atomic Number: 29</p>
+    <p>Atomic Mass: 63.546</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 11</p>
+    <p>Period: 4</p>
+    <p>Density: 8.96</p>
+    <p>Melting Point: 1085°C</p>
+    <p>Boiling Point: 2562°C</p>
+  </section>
+
+  <!-- Zinc -->
+  <section id="Zinc" aria-label="Zinc Information">
+    <h2>Zinc</h2>
+    <p>Symbol: Zn</p>
+    <p>Atomic Number: 30</p>
+    <p>Atomic Mass: 65.38</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 12</p>
+    <p>Period: 4</p>
+    <p>Density: 7.134</p>
+    <p>Melting Point: 419.53°C</p>
+    <p>Boiling Point: 907°C</p>
+  </section>
+  <!-- Gallium -->
+  <section id="Gallium" aria-label="Gallium Information">
+    <h2>Gallium</h2>
+    <p>Symbol: Ga</p>
+    <p>Atomic Number: 31</p>
+    <p>Atomic Mass: 69.723</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 13</p>
+    <p>Period: 4</p>
+    <p>Density: 5.91</p>
+    <p>Melting Point: 29.76°C</p>
+    <p>Boiling Point: 2204°C</p>
+  </section>
+
+  <!-- Germanium -->
+  <section id="Germanium" aria-label="Germanium Information">
+    <h2>Germanium</h2>
+    <p>Symbol: Ge</p>
+    <p>Atomic Number: 32</p>
+    <p>Atomic Mass: 72.63</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 14</p>
+    <p>Period: 4</p>
+    <p>Density: 5.323</p>
+    <p>Melting Point: 938.25°C</p>
+    <p>Boiling Point: 2833°C</p>
+  </section>
+
+  <!-- Arsenic -->
+  <section id="Arsenic" aria-label="Arsenic Information">
+    <h2>Arsenic</h2>
+    <p>Symbol: As</p>
+    <p>Atomic Number: 33</p>
+    <p>Atomic Mass: 74.921595</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 15</p>
+    <p>Period: 4</p>
+    <p>Density: 5.776</p>
+    <p>Melting Point: Sublimation</p>
+    <p>Boiling Point: Sublimation</p>
+  </section>
+
+  <!-- Selenium -->
+  <section id="Selenium" aria-label="Selenium Information">
+    <h2>Selenium</h2>
+    <p>Symbol: Se</p>
+    <p>Atomic Number: 34</p>
+    <p>Atomic Mass: 78.971</p>
+    <p>Category: Nonmetal</p>
+    <p>Group: 16</p>
+    <p>Period: 4</p>
+    <p>Density: 4.809</p>
+    <p>Melting Point: 221°C</p>
+    <p>Boiling Point: 685°C</p>
+  </section>
+
+  <!-- Bromine -->
+  <section id="Bromine" aria-label="Bromine Information">
+    <h2>Bromine</h2>
+    <p>Symbol: Br</p>
+    <p>Atomic Number: 35</p>
+    <p>Atomic Mass: 79.904</p>
+    <p>Category: Halogen</p>
+    <p>Group: 17</p>
+    <p>Period: 4</p>
+    <p>Density: 3.122</p>
+    <p>Melting Point: -7.2°C</p>
+    <p>Boiling Point: 58.8°C</p>
+  </section>
+
+  <!-- Krypton -->
+  <section id="Krypton" aria-label="Krypton Information">
+    <h2>Krypton</h2>
+    <p>Symbol: Kr</p>
+    <p>Atomic Number: 36</p>
+    <p>Atomic Mass: 83.798</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 4</p>
+    <p>Density: 0.003733</p>
+    <p>Melting Point: -157.36°C</p>
+    <p>Boiling Point: -153.22°C</p>
+  </section>
+
+  <!-- Rubidium -->
+  <section id="Rubidium" aria-label="Rubidium Information">
+    <h2>Rubidium</h2>
+    <p>Symbol: Rb</p>
+    <p>Atomic Number: 37</p>
+    <p>Atomic Mass: 85.4678</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 5</p>
+    <p>Density: 1.532</p>
+    <p>Melting Point: 39.3°C</p>
+    <p>Boiling Point: 688°C</p>
+  </section>
+
+  <!-- Strontium -->
+  <section id="Strontium" aria-label="Strontium Information">
+    <h2>Strontium</h2>
+    <p>Symbol: Sr</p>
+    <p>Atomic Number: 38</p>
+    <p>Atomic Mass: 87.62</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 5</p>
+    <p>Density: 2.64</p>
+    <p>Melting Point: 777°C</p>
+    <p>Boiling Point: 1377°C</p>
+  </section>
+ <!-- Yttrium -->
+  <section id="Yttrium" aria-label="Yttrium Information">
+    <h2>Yttrium</h2>
+        <p>Atomic Number: 39</p>
+    <p>Atomic Mass: 88.90584</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 3</p>
+    <p>Period: 5</p>
+    <p>Density: 4.472</p>
+    <p>Melting Point: 1526°C</p>
+    <p>Boiling Point: 3345°C</p>
+  </section>
+
+  <!-- Zirconium -->
+  <section id="Zirconium" aria-label="Zirconium Information">
+    <h2>Zirconium</h2>
+    <p>Symbol: Zr</p>
+    <p>Atomic Number: 40</p>
+    <p>Atomic Mass: 91.224</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 4</p>
+    <p>Period: 5</p>
+    <p>Density: 6.52</p>
+    <p>Melting Point: 1855°C</p>
+    <p>Boiling Point: 4409°C</p>
+  </section>
+
+    <!-- Niobium -->
+  <section id="Niobium" aria-label="Niobium Information">
+    <h2>Niobium</h2>
+    <p>Symbol: Nb</p>
+    <p>Atomic Number: 41</p>
+    <p>Atomic Mass: 92.90637</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 5</p>
+    <p>Period: 5</p>
+    <p>Density: 8.57</p>
+    <p>Melting Point: 2477°C</p>
+    <p>Boiling Point: 4744°C</p>
+  </section>
+
+  <!-- Molybdenum -->
+  <section id="Molybdenum" aria-label="Molybdenum Information">
+    <h2>Molybdenum</h2>
+    <p>Symbol: Mo</p>
+    <p>Atomic Number: 42</p>
+    <p>Atomic Mass: 95.95</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 6</p>
+    <p>Period: 5</p>
+    <p>Density: 10.28</p>
+    <p>Melting Point: 2623°C</p>
+    <p>Boiling Point: 4639°C</p>
+  </section>
+
+  <!-- Technetium -->
+  <section id="Technetium" aria-label="Technetium Information">
+    <h2>Technetium</h2>
+    <p>Symbol: Tc</p>
+    <p>Atomic Number: 43</p>
+    <p>Atomic Mass: [98]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 7</p>
+    <p>Period: 5</p>
+    <p>Density: 11.5</p>
+    <p>Melting Point: 2157°C</p>
+    <p>Boiling Point: 4265°C</p>
+  </section>
+
+  <!-- Ruthenium -->
+  <section id="Ruthenium" aria-label="Ruthenium Information">
+    <h2>Ruthenium</h2>
+    <p>Symbol: Ru</p>
+    <p>Atomic Number: 44</p>
+    <p>Atomic Mass: 101.07</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 8</p>
+    <p>Period: 5</p>
+    <p>Density: 12.37</p>
+    <p>Melting Point: 2334°C</p>
+    <p>Boiling Point: 4150°C</p>
+  </section>
+
+  <!-- Rhodium -->
+  <section id="Rhodium" aria-label="Rhodium Information">
+    <h2>Rhodium</h2>
+    <p>Symbol: Rh</p>
+    <p>Atomic Number: 45</p>
+    <p>Atomic Mass: 102.90550</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 9</p>
+    <p>Period: 5</p>
+    <p>Density: 12.41</p>
+    <p>Melting Point: 1964°C</p>
+    <p>Boiling Point: 3695°C</p>
+  </section>
+
+  <!-- Palladium -->
+  <section id="Palladium" aria-label="Palladium Information">
+    <h2>Palladium</h2>
+    <p>Symbol: Pd</p>
+    <p>Atomic Number: 46</p>
+    <p>Atomic Mass: 106.42</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 10</p>
+    <p>Period: 5</p>
+    <p>Density: 12.02</p>
+    <p>Melting Point: 1554.9°C</p>
+    <p>Boiling Point: 2963°C</p>
+  </section>
+
+  <!-- Silver -->
+  <section id="Silver" aria-label="Silver Information">
+    <h2>Silver</h2>
+    <p>Symbol: Ag</p>
+    <p>Atomic Number: 47</p>
+    <p>Atomic Mass: 107.8682</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 11</p>
+    <p>Period: 5</p>
+    <p>Density: 10.49</p>
+    <p>Melting Point: 961.78°C</p>
+    <p>Boiling Point: 2162°C</p>
+  </section>
+
+  <!-- Cadmium -->
+  <section id="Cadmium" aria-label="Cadmium Information">
+    <h2>Cadmium</h2>
+    <p>Symbol: Cd</p>
+    <p>Atomic Number: 48</p>
+    <p>Atomic Mass: 112.414</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 12</p>
+    <p>Period: 5</p>
+    <p>Density: 8.65</p>
+    <p>Melting Point: 321.07°C</p>
+    <p>Boiling Point: 767°C</p>
+  </section>
+
+  <!-- Indium -->
+  <section id="Indium" aria-label="Indium Information">
+    <h2>Indium</h2>
+    <p>Symbol: In</p>
+    <p>Atomic Number: 49</p>
+    <p>Atomic Mass: 114.818</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 13</p>
+    <p>Period: 5</p>
+    <p>Density: 7.31</p>
+    <p>Melting Point: 156.6°C</p>
+    <p>Boiling Point: 2072°C</p>
+  </section>
+
+  <!-- Tin -->
+  <section id="Tin" aria-label="Tin Information">
+    <h2>Tin</h2>
+    <p>Symbol: Sn</p>
+    <p>Atomic Number: 50</p>
+    <p>Atomic Mass: 118.710</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 14</p>
+    <p>Period: 5</p>
+    <p>Density: 7.287</p>
+    <p>Melting Point: 231.93°C</p>
+    <p>Boiling Point: 2602°C</p>
+  </section>
+  <!-- Antimony -->
+  <section id="Antimony" aria-label="Antimony Information">
+    <h2>Antimony</h2>
+    <p>Symbol: Sb</p>
+    <p>Atomic Number: 51</p>
+    <p>Atomic Mass: 121.760</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 15</p>
+    <p>Period: 5</p>
+    <p>Density: 6.685</p>
+    <p>Melting Point: 630.63°C</p>
+    <p>Boiling Point: 1587°C</p>
+  </section>
+
+  <!-- Tellurium -->
+  <section id="Tellurium" aria-label="Tellurium Information">
+    <h2>Tellurium</h2>
+    <p>Symbol: Te</p>
+    <p>Atomic Number: 52</p>
+    <p>Atomic Mass: 127.60</p>
+    <p>Category: Metalloid</p>
+    <p>Group: 16</p>
+    <p>Period: 5</p>
+    <p>Density: 6.24</p>
+    <p>Melting Point: 449.51°C</p>
+    <p>Boiling Point: 988°C</p>
+  </section>
+
+  <!-- Iodine -->
+  <section id="Iodine" aria-label="Iodine Information">
+    <h2>Iodine</h2>
+    <p>Symbol: I</p>
+    <p>Atomic Number: 53</p>
+    <p>Atomic Mass: 126.90447</p>
+    <p>Category: Halogen</p>
+    <p>Group: 17</p>
+    <p>Period: 5</p>
+    <p>Density: 4.93</p>
+    <p>Melting Point: 113.7°C</p>
+    <p>Boiling Point: 184.3°C</p>
+  </section>
+
+  <!-- Xenon -->
+  <section id="Xenon" aria-label="Xenon Information">
+    <h2>Xenon</h2>
+    <p>Symbol: Xe</p>
+    <p>Atomic Number: 54</p>
+    <p>Atomic Mass: 131.293</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 5</p>
+    <p>Density: 0.005887</p>
+    <p>Melting Point: -111.8°C</p>
+    <p>Boiling Point: -108.0°C</p>
+  </section>
+
+  <!-- Cesium -->
+  <section id="Cesium" aria-label="Cesium Information">
+    <h2>Cesium</h2>
+    <p>Symbol: Cs</p>
+    <p>Atomic Number: 55</p>
+    <p>Atomic Mass: 132.90545196</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 6</p>
+    <p>Density: 1.93</p>
+    <p>Melting Point: 28.5°C</p>
+    <p>Boiling Point: 671°C</p>
+  </section>
+
+  <!-- Barium -->
+  <section id="Barium" aria-label="Barium Information">
+    <h2>Barium</h2>
+    <p>Symbol: Ba</p>
+    <p>Atomic Number: 56</p>
+    <p>Atomic Mass: 137.327</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 6</p>
+    <p>Density: 3.51</p>
+    <p>Melting Point: 727°C</p>
+    <p>Boiling Point: 1897°C</p>
+  </section>
+
+  <!-- Lanthanum -->
+  <section id="Lanthanum" aria-label="Lanthanum Information">
+    <h2>Lanthanum</h2>
+    <p>Symbol: La</p>
+    <p>Atomic Number: 57</p>
+    <p>Atomic Mass: 138.90547</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 6.162</p>
+    <p>Melting Point: 920°C</p>
+    <p>Boiling Point: 3464°C</p>
+  </section>
+
+  <!-- Cerium -->
+  <section id="Cerium" aria-label="Cerium Information">
+    <h2>Cerium</h2>
+    <p>Symbol: Ce</p>
+    <p>Atomic Number: 58</p>
+    <p>Atomic Mass: 140.116</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 6.770</p>
+    <p>Melting Point: 798°C</p>
+    <p>Boiling Point: 3443°C</p>
+  </section>
+
+  <!-- Praseodymium -->
+  <section id="Praseodymium" aria-label="Praseodymium Information">
+    <h2>Praseodymium</h2>
+    <p>Symbol: Pr</p>
+    <p>Atomic Number: 59</p>
+    <p>Atomic Mass: 140.90766</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 6.773</p>
+    <p>Melting Point: 931°C</p>
+    <p>Boiling Point: 3520°C</p>
+  </section>
+
+  <!-- Neodymium -->
+  <section id="Neodymium" aria-label="Neodymium Information">
+    <h2>Neodymium</h2>
+    <p>Symbol: Nd</p>
+    <p>Atomic Number: 60</p>
+    <p>Atomic Mass: 144.242</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 7.007</p>
+    <p>Melting Point: 1010°C</p>
+    <p>Boiling Point: 3074°C</p>
+  </section>
+  <!-- Promethium -->
+  <section id="Promethium" aria-label="Promethium Information">
+    <h2>Promethium</h2>
+    <p>Symbol: Pm</p>
+    <p>Atomic Number: 61</p>
+    <p>Atomic Mass: [145]</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 7.26</p>
+    <p>Melting Point: 1042°C</p>
+    <p>Boiling Point: 3000°C</p>
+  </section>
+
+  <!-- Samarium -->
+  <section id="Samarium" aria-label="Samarium Information">
+    <h2>Samarium</h2>
+    <p>Symbol: Sm</p>
+    <p>Atomic Number: 62</p>
+    <p>Atomic Mass: 150.36</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 7.52</p>
+    <p>Melting Point: 1072°C</p>
+    <p>Boiling Point: 1900°C</p>
+  </section>
+
+  <!-- Europium -->
+  <section id="Europium" aria-label="Europium Information">
+    <h2>Europium</h2>
+    <p>Symbol: Eu</p>
+    <p>Atomic Number: 63</p>
+    <p>Atomic Mass: 151.964</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 5.243</p>
+    <p>Melting Point: 822°C</p>
+    <p>Boiling Point: 1597°C</p>
+  </section>
+
+  <!-- Gadolinium -->
+  <section id="Gadolinium" aria-label="Gadolinium Information">
+    <h2>Gadolinium</h2>
+    <p>Symbol: Gd</p>
+    <p>Atomic Number: 64</p>
+    <p>Atomic Mass: 157.25</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 7.895</p>
+    <p>Melting Point: 1313°C</p>
+    <p>Boiling Point: 3273°C</p>
+  </section>
+
+  <!-- Terbium -->
+  <section id="Terbium" aria-label="Terbium Information">
+    <h2>Terbium</h2>
+    <p>Symbol: Tb</p>
+    <p>Atomic Number: 65</p>
+    <p>Atomic Mass: 158.92535</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 8.229</p>
+    <p>Melting Point: 1356°C</p>
+    <p>Boiling Point: 3230°C</p>
+  </section>
+
+  <!-- Dysprosium -->
+  <section id="Dysprosium" aria-label="Dysprosium Information">
+    <h2>Dysprosium</h2>
+    <p>Symbol: Dy</p>
+    <p>Atomic Number: 66</p>
+    <p>Atomic Mass: 162.500</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 8.55</p>
+    <p>Melting Point: 1412°C</p>
+    <p>Boiling Point: 2567°C</p>
+  </section>
+
+  <!-- Holmium -->
+  <section id="Holmium" aria-label="Holmium Information">
+    <h2>Holmium</h2>
+    <p>Symbol: Ho</p>
+    <p>Atomic Number: 67</p>
+    <p>Atomic Mass: 164.93033</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 8.795</p>
+    <p>Melting Point: 1474°C</p>
+    <p>Boiling Point: 2700°C</p>
+  </section>
+
+  <!-- Erbium -->
+  <section id="Erbium" aria-label="Erbium Information">
+    <h2>Erbium</h2>
+    <p>Symbol: Er</p>
+    <p>Atomic Number: 68</p>
+    <p>Atomic Mass: 167.259</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 9.066</p>
+    <p>Melting Point: 1529°C</p>
+    <p>Boiling Point: 2868°C</p>
+  </section>
+
+  <!-- Thulium -->
+  <section id="Thulium" aria-label="Thulium Information">
+    <h2>Thulium</h2>
+    <p>Symbol: Tm</p>
+    <p>Atomic Number: 69</p>
+    <p>Atomic Mass: 168.93422</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 9.321</p>
+    <p>Melting Point: 1545°C</p>
+    <p>Boiling Point: 1950°C</p>
+  </section>
+
+  <!-- Ytterbium -->
+  <section id="Ytterbium" aria-label="Ytterbium Information">
+    <h2>Ytterbium</h2>
+    <p>Symbol: Yb</p>
+    <p>Atomic Number: 70</p>
+    <p>Atomic Mass: 173.045</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 6.965</p>
+    <p>Melting Point: 819°C</p>
+    <p>Boiling Point: 1196°C</p>
+  </section>
+  <!-- Lutetium -->
+  <section id="Lutetium" aria-label="Lutetium Information">
+    <h2>Lutetium</h2>
+    <p>Symbol: Lu</p>
+    <p>Atomic Number: 71</p>
+    <p>Atomic Mass: 174.9668</p>
+    <p>Category: Lanthanide</p>
+    <p>Group: N/A</p>
+    <p>Period: 6</p>
+    <p>Density: 9.841</p>
+    <p>Melting Point: 1663°C</p>
+    <p>Boiling Point: 3402°C</p>
+  </section>
+
+  <!-- Hafnium -->
+  <section id="Hafnium" aria-label="Hafnium Information">
+    <h2>Hafnium</h2>
+    <p>Symbol: Hf</p>
+    <p>Atomic Number: 72</p>
+    <p>Atomic Mass: 178.49</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 4</p>
+    <p>Period: 6</p>
+    <p>Density: 13.31</p>
+    <p>Melting Point: 2233°C</p>
+    <p>Boiling Point: 4603°C</p>
+  </section>
+
+  <!-- Tantalum -->
+  <section id="Tantalum" aria-label="Tantalum Information">
+    <h2>Tantalum</h2>
+    <p>Symbol: Ta</p>
+    <p>Atomic Number: 73</p>
+    <p>Atomic Mass: 180.94788</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 5</p>
+    <p>Period: 6</p>
+    <p>Density: 16.654</p>
+    <p>Melting Point: 3017°C</p>
+    <p>Boiling Point: 5458°C</p>
+  </section>
+
+  <!-- Tungsten -->
+  <section id="Tungsten" aria-label="Tungsten Information">
+    <h2>Tungsten</h2>
+    <p>Symbol: W</p>
+    <p>Atomic Number: 74</p>
+    <p>Atomic Mass: 183.84</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 6</p>
+    <p>Period: 6</p>
+    <p>Density: 19.25</p>
+    <p>Melting Point: 3422°C</p>
+    <p>Boiling Point: 5555°C</p>
+  </section>
+
+  <!-- Rhenium -->
+  <section id="Rhenium" aria-label="Rhenium Information">
+    <h2>Rhenium</h2>
+    <p>Symbol: Re</p>
+    <p>Atomic Number: 75</p>
+    <p>Atomic Mass: 186.207</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 7</p>
+    <p>Period: 6</p>
+    <p>Density: 21.02</p>
+    <p>Melting Point: 3186°C</p>
+    <p>Boiling Point: 5596°C</p>
+  </section>
+
+  <!-- Osmium -->
+  <section id="Osmium" aria-label="Osmium Information">
+    <h2>Osmium</h2>
+    <p>Symbol: Os</p>
+    <p>Atomic Number: 76</p>
+    <p>Atomic Mass: 190.23</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 8</p>
+    <p>Period: 6</p>
+    <p>Density: 22.59</p>
+    <p>Melting Point: 3033°C</p>
+    <p>Boiling Point: 5012°C</p>
+  </section>
+
+  <!-- Iridium -->
+  <section id="Iridium" aria-label="Iridium Information">
+    <h2>Iridium</h2>
+    <p>Symbol: Ir</p>
+    <p>Atomic Number: 77</p>
+    <p>Atomic Mass: 192.217</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 9</p>
+    <p>Period: 6</p>
+    <p>Density: 22.56</p>
+    <p>Melting Point: 2446°C</p>
+    <p>Boiling Point: 4428°C</p>
+  </section>
+
+  <!-- Platinum -->
+  <section id="Platinum" aria-label="Platinum Information">
+    <h2>Platinum</h2>
+    <p>Symbol: Pt</p>
+    <p>Atomic Number: 78</p>
+    <p>Atomic Mass: 195.084</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 10</p>
+    <p>Period: 6</p>
+    <p>Density: 21.46</p>
+    <p>Melting Point: 1768.3°C</p>
+    <p>Boiling Point: 3825°C</p>
+  </section>
+
+  <!-- Gold -->
+  <section id="Gold" aria-label="Gold Information">
+    <h2>Gold</h2>
+    <p>Symbol: Au</p>
+    <p>Atomic Number: 79</p>
+    <p>Atomic Mass: 196.966569</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 11</p>
+    <p>Period: 6</p>
+    <p>Density: 19.282</p>
+    <p>Melting Point: 1064.18°C</p>
+    <p>Boiling Point: 2970°C</p>
+  </section>
+
+  <!-- Mercury -->
+  <section id="Mercury" aria-label="Mercury Information">
+    <h2>Mercury</h2>
+    <p>Symbol: Hg</p>
+    <p>Atomic Number: 80</p>
+    <p>Atomic Mass: 200.592</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 12</p>
+    <p>Period: 6</p>
+    <p>Density: 13.5336</p>
+    <p>Melting Point: -38.83°C</p>
+    <p>Boiling Point: 356.73°C</p>
+  </section>
+  <!-- Thallium -->
+  <section id="Thallium" aria-label="Thallium Information">
+    <h2>Thallium</h2>
+    <p>Symbol: Tl</p>
+    <p>Atomic Number: 81</p>
+    <p>Atomic Mass: 204.38</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 13</p>
+    <p>Period: 6</p>
+    <p>Density: 11.85</p>
+    <p>Melting Point: 304°C</p>
+    <p>Boiling Point: 1473°C</p>
+  </section>
+
+  <!-- Lead -->
+  <section id="Lead" aria-label="Lead Information">
+    <h2>Lead</h2>
+    <p>Symbol: Pb</p>
+    <p>Atomic Number: 82</p>
+    <p>Atomic Mass: 207.2</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 14</p>
+    <p>Period: 6</p>
+    <p>Density: 11.34</p>
+    <p>Melting Point: 327.46°C</p>
+    <p>Boiling Point: 1749°C</p>
+  </section>
+
+  <!-- Bismuth -->
+  <section id="Bismuth" aria-label="Bismuth Information">
+    <h2>Bismuth</h2>
+    <p>Symbol: Bi</p>
+    <p>Atomic Number: 83</p>
+    <p>Atomic Mass: 208.98040</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 15</p>
+    <p>Period: 6</p>
+    <p>Density: 9.78</p>
+    <p>Melting Point: 271.5°C</p>
+    <p>Boiling Point: 1564°C</p>
+  </section>
+
+  <!-- Polonium -->
+  <section id="Polonium" aria-label="Polonium Information">
+    <h2>Polonium</h2>
+    <p>Symbol: Po</p>
+    <p>Atomic Number: 84</p>
+    <p>Atomic Mass: [209]</p>
+    <p>Category: Post-transition Metal</p>
+    <p>Group: 16</p>
+    <p>Period: 6</p>
+    <p>Density: 9.196</p>
+    <p>Melting Point: 254°C</p>
+    <p>Boiling Point: 962°C</p>
+  </section>
+
+  <!-- Astatine -->
+  <section id="Astatine" aria-label="Astatine Information">
+    <h2>Astatine</h2>
+    <p>Symbol: At</p>
+    <p>Atomic Number: 85</p>
+    <p>Atomic Mass: [210]</p>
+    <p>Category: Halogen</p>
+    <p>Group: 17</p>
+    <p>Period: 6</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: 302°C</p>
+    <p>Boiling Point: 337°C</p>
+  </section>
+
+  <!-- Radon -->
+  <section id="Radon" aria-label="Radon Information">
+    <h2>Radon</h2>
+    <p>Symbol: Rn</p>
+    <p>Atomic Number: 86</p>
+    <p>Atomic Mass: [222]</p>
+    <p>Category: Noble Gas</p>
+    <p>Group: 18</p>
+    <p>Period: 6</p>
+    <p>Density: 0.00973</p>
+    <p>Melting Point: -71°C</p>
+    <p>Boiling Point: -61.7°C</p>
+  </section>
+
+  <!-- Francium -->
+  <section id="Francium" aria-label="Francium Information">
+    <h2>Francium</h2>
+    <p>Symbol: Fr</p>
+    <p>Atomic Number: 87</p>
+    <p>Atomic Mass: [223]</p>
+    <p>Category: Alkali Metal</p>
+    <p>Group: 1</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: 27°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Radium -->
+  <section id="Radium" aria-label="Radium Information">
+    <h2>Radium</h2>
+    <p>Symbol: Ra</p>
+    <p>Atomic Number: 88</p>
+    <p>Atomic Mass: [226]</p>
+    <p>Category: Alkaline Earth Metal</p>
+    <p>Group: 2</p>
+    <p>Period: 7</p>
+    <p>Density: 5.5</p>
+    <p>Melting Point: 700°C</p>
+    <p>Boiling Point: 1737°C</p>
+  </section>
+
+  <!-- Actinium -->
+  <section id="Actinium" aria-label="Actinium Information">
+    <h2>Actinium</h2>
+    <p>Symbol: Ac</p>
+    <p>Atomic Number: 89</p>
+    <p>Atomic Mass: [227]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 10.07</p>
+    <p>Melting Point: 1050°C</p>
+    <p>Boiling Point: 3200°C</p>
+  </section>
+
+  <!-- Thorium -->
+  <section id="Thorium" aria-label="Thorium Information">
+    <h2>Thorium</h2>
+    <p>Symbol: Th</p>
+    <p>Atomic Number: 90</p>
+    <p>Atomic Mass: 232.03805</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 11.72</p>
+    <p>Melting Point: 1750°C</p>
+    <p>Boiling Point: 4788°C</p>
+  </section>
+  <!-- Protactinium -->
+  <section id="Protactinium" aria-label="Protactinium Information">
+    <h2>Protactinium</h2>
+    <p>Symbol: Pa</p>
+    <p>Atomic Number: 91</p>
+    <p>Atomic Mass: 231.03588</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 15.37</p>
+    <p>Melting Point: 1568°C</p>
+    <p>Boiling Point: 4027°C</p>
+  </section>
+
+  <!-- Uranium -->
+  <section id="Uranium" aria-label="Uranium Information">
+    <h2>Uranium</h2>
+    <p>Symbol: U</p>
+    <p>Atomic Number: 92</p>
+    <p>Atomic Mass: 238.05078</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 19.1</p>
+    <p>Melting Point: 1135°C</p>
+    <p>Boiling Point: 4131°C</p>
+  </section>
+
+  <!-- Neptunium -->
+  <section id="Neptunium" aria-label="Neptunium Information">
+    <h2>Neptunium</h2>
+    <p>Symbol: Np</p>
+    <p>Atomic Number: 93</p>
+    <p>Atomic Mass: [237]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 20.45</p>
+    <p>Melting Point: 640°C</p>
+    <p>Boiling Point: 3902°C</p>
+  </section>
+
+  <!-- Plutonium -->
+  <section id="Plutonium" aria-label="Plutonium Information">
+    <h2>Plutonium</h2>
+    <p>Symbol: Pu</p>
+    <p>Atomic Number: 94</p>
+    <p>Atomic Mass: [244]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 19.86</p>
+    <p>Melting Point: 639.4°C</p>
+    <p>Boiling Point: 3235°C</p>
+  </section>
+
+  <!-- Americium -->
+  <section id="Americium" aria-label="Americium Information">
+    <h2>Americium</h2>
+    <p>Symbol: Am</p>
+    <p>Atomic Number: 95</p>
+    <p>Atomic Mass: [243]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 13.69</p>
+    <p>Melting Point: 1176°C</p>
+    <p>Boiling Point: 2607°C</p>
+  </section>
+
+  <!-- Curium -->
+  <section id="Curium" aria-label="Curium Information">
+    <h2>Curium</h2>
+    <p>Symbol: Cm</p>
+    <p>Atomic Number: 96</p>
+    <p>Atomic Mass: [247]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 13.51</p>
+    <p>Melting Point: 1345°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Berkelium -->
+  <section id="Berkelium" aria-label="Berkelium Information">
+    <h2>Berkelium</h2>
+    <p>Symbol: Bk</p>
+    <p>Atomic Number: 97</p>
+    <p>Atomic Mass: [247]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 14.78</p>
+    <p>Melting Point: 986°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Californium -->
+  <section id="Californium" aria-label="Californium Information">
+    <h2>Californium</h2>
+    <p>Symbol: Cf</p>
+    <p>Atomic Number: 98</p>
+    <p>Atomic Mass: [251]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 15.1</p>
+    <p>Melting Point: 900°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Einsteinium -->
+  <section id="Einsteinium" aria-label="Einsteinium Information">
+    <h2>Einsteinium</h2>
+    <p>Symbol: Es</p>
+    <p>Atomic Number: 99</p>
+    <p>Atomic Mass: [252]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: 8.84</p>
+    <p>Melting Point: 860°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Fermium -->
+  <section id="Fermium" aria-label="Fermium Information">
+    <h2>Fermium</h2>
+    <p>Symbol: Fm</p>
+    <p>Atomic Number: 100</p>
+    <p>Atomic Mass: [257]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: 1527°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+  <!-- Mendelevium -->
+  <section id="Mendelevium" aria-label="Mendelevium Information">
+    <h2>Mendelevium</h2>
+    <p>Symbol: Md</p>
+    <p>Atomic Number: 101</p>
+    <p>Atomic Mass: [258]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Nobelium -->
+  <section id="Nobelium" aria-label="Nobelium Information">
+    <h2>Nobelium</h2>
+    <p>Symbol: No</p>
+    <p>Atomic Number: 102</p>
+    <p>Atomic Mass: [259]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Lawrencium -->
+  <section id="Lawrencium" aria-label="Lawrencium Information">
+    <h2>Lawrencium</h2>
+    <p>Symbol: Lr</p>
+    <p>Atomic Number: 103</p>
+    <p>Atomic Mass: [262]</p>
+    <p>Category: Actinide</p>
+    <p>Group: N/A</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: 1627°C</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Rutherfordium -->
+  <section id="Rutherfordium" aria-label="Rutherfordium Information">
+    <h2>Rutherfordium</h2>
+    <p>Symbol: Rf</p>
+    <p>Atomic Number: 104</p>
+    <p>Atomic Mass: [267]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 4</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Dubnium -->
+  <section id="Dubnium" aria-label="Dubnium Information">
+    <h2>Dubnium</h2>
+    <p>Symbol: Db</p>
+    <p>Atomic Number: 105</p>
+    <p>Atomic Mass: [270]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 5</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Seaborgium -->
+  <section id="Seaborgium" aria-label="Seaborgium Information">
+    <h2>Seaborgium</h2>
+    <p>Symbol: Sg</p>
+    <p>Atomic Number: 106</p>
+    <p>Atomic Mass: [271]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 6</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Bohrium -->
+  <section id="Bohrium" aria-label="Bohrium Information">
+    <h2>Bohrium</h2>
+    <p>Symbol: Bh</p>
+    <p>Atomic Number: 107</p>
+    <p>Atomic Mass: [270]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 7</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Hassium -->
+  <section id="Hassium" aria-label="Hassium Information">
+    <h2>Hassium</h2>
+    <p>Symbol: Hs</p>
+    <p>Atomic Number: 108</p>
+    <p>Atomic Mass: [277]</p>
+    <p>Category: Transition Metal</p>
+    <p>Group: 8</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Meitnerium -->
+  <section id="Meitnerium" aria-label="Meitnerium Information">
+    <h2>Meitnerium</h2>
+    <p>Symbol: Mt</p>
+    <p>Atomic Number: 109</p>
+    <p>Atomic Mass: [276]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 9</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Darmstadtium -->
+  <section id="Darmstadtium" aria-label="Darmstadtium Information">
+    <h2>Darmstadtium</h2>
+    <p>Symbol: Ds</p>
+    <p>Atomic Number: 110</p>
+    <p>Atomic Mass: [281]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 10</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+  <!-- Roentgenium -->
+  <section id="Roentgenium" aria-label="Roentgenium Information">
+    <h2>Roentgenium</h2>
+    <p>Symbol: Rg</p>
+    <p>Atomic Number: 111</p>
+    <p>Atomic Mass: [280]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 11</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Copernicium -->
+  <section id="Copernicium" aria-label="Copernicium Information">
+    <h2>Copernicium</h2>
+    <p>Symbol: Cn</p>
+    <p>Atomic Number: 112</p>
+    <p>Atomic Mass: [285]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 12</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Nihonium -->
+  <section id="Nihonium" aria-label="Nihonium Information">
+    <h2>Nihonium</h2>
+    <p>Symbol: Nh</p>
+    <p>Atomic Number: 113</p>
+    <p>Atomic Mass: [286]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 13</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Flerovium -->
+  <section id="Flerovium" aria-label="Flerovium Information">
+    <h2>Flerovium</h2>
+    <p>Symbol: Fl</p>
+    <p>Atomic Number: 114</p>
+    <p>Atomic Mass: [289]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 14</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Moscovium -->
+  <section id="Moscovium" aria-label="Moscovium Information">
+    <h2>Moscovium</h2>
+    <p>Symbol: Mc</p>
+    <p>Atomic Number: 115</p>
+    <p>Atomic Mass: [290]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 15</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Livermorium -->
+  <section id="Livermorium" aria-label="Livermorium Information">
+    <h2>Livermorium</h2>
+    <p>Symbol: Lv</p>
+    <p>Atomic Number: 116</p>
+    <p>Atomic Mass: [293]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 16</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Tennessine -->
+  <section id="Tennessine" aria-label="Tennessine Information">
+    <h2>Tennessine</h2>
+    <p>Symbol: Ts</p>
+    <p>Atomic Number: 117</p>
+    <p>Atomic Mass: [294]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 17</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+
+  <!-- Oganesson -->
+  <section id="Oganesson" aria-label="Oganesson Information">
+    <h2>Oganesson</h2>
+    <p>Symbol: Og</p>
+    <p>Atomic Number: 118</p>
+    <p>Atomic Mass: [294]</p>
+    <p>Category: Unknown</p>
+    <p>Group: 18</p>
+    <p>Period: 7</p>
+    <p>Density: N/A</p>
+    <p>Melting Point: N/A</p>
+    <p>Boiling Point: N/A</p>
+  </section>
+  </div>
+
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize search bar and add event listener
+  document.getElementById('searchButton').addEventListener('click', filterAndSearchElements);
+  document.getElementById('searchInput').addEventListener('input', autocomplete);
+  
+  document.getElementById('searchInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      filterAndSearchElements();
+    }
+  });
+
+  // Debugging: Check if event listeners are attached
+  console.log('Event listeners attached.');
+
+  // Speech recognition
+  const speechButton = document.getElementById('speechButton');
+  if ('webkitSpeechRecognition' in window) {
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.onresult = function(event) {
+      const speechResult = event.results[0][0].transcript.toLowerCase();
+      searchBySpeech(speechResult);
+    };
+    speechButton.addEventListener('click', function() {
+      recognition.start();
+    });
+  } else {
+    speechButton.disabled = true;
+    speechButton.title = "Your browser doesn't support speech recognition.";
+  }
+
+  // Function to search by speech
+  function searchBySpeech(speechResult) {
+    const elements = document.querySelectorAll('#periodicElements section');
+    elements.forEach(element => {
+      const elementName = element.querySelector('h2').textContent.toLowerCase();
+      if (elementName === speechResult) {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    });
+    document.getElementById('periodicElements').scrollIntoView();
+  }
+
+  // Function to filter and search elements
+  function filterAndSearchElements() {
+    const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+    const searchNumber = parseFloat(searchInput);
+    const isWholeNumber = Number.isInteger(searchNumber);
+    const elements = document.querySelectorAll('#periodicElements section');
+    let californiumDisplayed = false;
+
+    elements.forEach(element => {
+      const symbol = element.querySelector('p:nth-child(2)').textContent.split(': ')[1].toLowerCase();
+      const name = element.querySelector('h2').textContent.toLowerCase();
+      const atomicNumber = parseInt(element.querySelector('p:nth-child(3)').textContent.split(': ')[1]);
+      let atomicMassText = element.querySelector('p:nth-child(4)').textContent.split(': ')[1];
+      atomicMassText = atomicMassText.replace(/[\[\]]/g, '');
+      const atomicMass = parseFloat(atomicMassText);
+      let displayElement = false;
+
+      if (isWholeNumber) {
+        if (searchNumber === 43) {
+          // Special case for Technetium
+          displayElement = atomicNumber === 43;
+        } else if (searchNumber === 98) {
+          // Special case for atomic mass 98
+          if (atomicNumber === 98) {
+            displayElement = true;
+            californiumDisplayed = true;
+          } else if (Math.round(atomicMass) === 98 && !californiumDisplayed) {
+            displayElement = true;
+          }
+        } else if (searchNumber < 118) {
+          // Search by atomic number
+          displayElement = atomicNumber === searchNumber;
+        } else {
+          // Search by atomic mass
+          displayElement = Math.round(atomicMass) === searchNumber;
+        }
+      } else {
+        // Search by name or symbol
+        displayElement = name.includes(searchInput) || symbol.includes(searchInput) || atomicMassText.includes(searchInput);
+      }
+
+      element.style.display = displayElement ? 'block' : 'none';
+    });
+    document.getElementById('searchInput').value = '';
+    const firstVisibleElement = document.querySelector('#periodicElements section[style="display: block;"]');
+    if (firstVisibleElement) {
+      firstVisibleElement.scrollIntoView();
+    }
+  }
+
+  // Function for autocomplete
+  function autocomplete() {
+    const searchInput = document.getElementById('searchInput').value;
+    const datalist = document.getElementById('autocomplete');
+    datalist.innerHTML = '';
+    if (searchInput.length >= 3 || searchInput.includes('.')) {
+      const elements = document.querySelectorAll('#periodicElements section');
+      elements.forEach(element => {
+        const name = element.querySelector('h2').textContent;
+        const atomicMass = element.querySelector('p:nth-child(4)').textContent.split(': ')[1];
+        if (name.toLowerCase().startsWith(searchInput.toLowerCase())) {
+          const option = document.createElement('option');
+          option.value = name;
+          datalist.appendChild(option);
+        }
+        if (searchInput.includes('.') && atomicMass.startsWith(searchInput)) {
+          const option = document.createElement('option');
+          option.value = atomicMass;
+          datalist.appendChild(option);
+        }
+      });
+    }
+  }
+
+  // Function to copy text to clipboard
+  function copyToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+
+  // Add copy-to-clipboard buttons
+  const elements = document.querySelectorAll('#periodicElements section');
+  elements.forEach(element => {
+    const copyButton = document.createElement('button');
+    copyButton.textContent = 'Copy to Clipboard';
+    copyButton.addEventListener('click', () => {
+      const elementInfo = element.innerText;
+      copyToClipboard(elementInfo);
+    });
+    element.appendChild(copyButton);
+  });
+});
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+
+// ... (Existing JavaScript code) ...
+
+function showFilterOptions(filterType) {
+    const filterOptionsDiv = document.getElementById('filterOptions');
+    filterOptionsDiv.innerHTML = ''; // Clear existing options
+    filterOptionsDiv.style.display = 'block';
+
+    const elements = document.querySelectorAll('#periodicElements section');
+    const filterValues = new Set();
+
+    elements.forEach(element => {
+        let value;
+        switch (filterType) {
+            case 'category':
+                value = element.querySelector('p:nth-child(5)').textContent.split(': ')[1];
+                // Correct the category for Yttrium
+                if (element.id === 'Yttrium') {
+                    value = 'Transition Metal';
+                }
+                break;
+            case 'group':
+                value = element.querySelector('p:nth-child(6)').textContent.split(': ')[1];
+                break;
+            case 'period':
+                value = element.querySelector('p:nth-child(7)').textContent.split(': ')[1];
+                break;
+        }
+        // Exclude invalid period values
+        if (!(filterType === 'period' && isNaN(parseInt(value)))) {
+            filterValues.add(value);
+        }
+    });
+
+    // Sort the filter values if they are numeric (for groups)
+    const sortedFilterValues = Array.from(filterValues).sort((a, b) => {
+        return filterType === 'group' ? parseInt(a) - parseInt(b) : a.localeCompare(b);
+    });
+
+    sortedFilterValues.forEach(value => {
+        const filterOption = document.createElement('button');
+        filterOption.textContent = value;
+        filterOption.addEventListener('click', () => filterElements(filterType, value));
+        filterOptionsDiv.appendChild(filterOption);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (Other initialization code) ...
+
+    document.getElementById('sortByCategory').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('category');
+    });
+    document.getElementById('sortByGroup').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('group');
+    });
+    document.getElementById('sortByPeriod').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('period');
+    });
+
+    // ... (Rest of the initialization code) ...
+});
+
+function showFilterOptions(filterType) {
+    console.log(`Filtering by: ${filterType}`); // Debugging line
+
+    const filterOptionsDiv = document.getElementById('filterOptions');
+    filterOptionsDiv.innerHTML = '';
+    filterOptionsDiv.style.display = 'block';
+
+    // ... (Rest of the showFilterOptions function) ...
+}
+
+// ... (Rest of the JavaScript code) ...
+
+
+
+
+function showFilterOptions(filterType) {
+    const filterOptionsDiv = document.getElementById('filterOptions');
+    filterOptionsDiv.innerHTML = ''; // Clear existing options
+    filterOptionsDiv.style.display = 'block';
+
+    const elements = document.querySelectorAll('#periodicElements section');
+    const filterValues = new Set();
+
+    elements.forEach(element => {
+        let value;
+        switch (filterType) {
+            case 'category':
+                value = element.querySelector('p:nth-child(5)').textContent.split(': ')[1];
+                // Correct the category for Yttrium
+                if (element.id === 'Yttrium') {
+                    value = 'Transition Metal';
+                }
+                break;
+            case 'group':
+                value = element.querySelector('p:nth-child(6)').textContent.split(': ')[1];
+                break;
+            case 'period':
+                value = element.querySelector('p:nth-child(7)').textContent.split(': ')[1];
+                break;
+        }
+        // Exclude invalid period values
+        if (!(filterType === 'period' && isNaN(parseInt(value)))) {
+            filterValues.add(value);
+        }
+    });
+
+    // Sort the filter values if they are numeric (for groups)
+    const sortedFilterValues = Array.from(filterValues).sort((a, b) => {
+        return filterType === 'group' ? parseInt(a) - parseInt(b) : a.localeCompare(b);
+    });
+
+    sortedFilterValues.forEach(value => {
+        const filterOption = document.createElement('button');
+        filterOption.textContent = value;
+        filterOption.addEventListener('click', () => filterElements(filterType, value));
+        filterOptionsDiv.appendChild(filterOption);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (Other initialization code) ...
+
+    document.getElementById('sortByCategory').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('category');
+    });
+    document.getElementById('sortByGroup').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('group');
+    });
+    document.getElementById('sortByPeriod').addEventListener('click', (e) => {
+        e.preventDefault();
+        showFilterOptions('period');
+    });
+
+    // ... (Rest of the initialization code) ...
+});
+
+function showFilterOptions(filterType) {
+    console.log(`Filtering by: ${filterType}`); // Debugging line
+
+    const filterOptionsDiv = document.getElementById('filterOptions');
+    filterOptionsDiv.innerHTML = '';
+    filterOptionsDiv.style.display = 'block';
+
+    // ... (Rest of the showFilterOptions function) ...
+}
+
+// ... (Rest of the JavaScript code) ...
+
+
+</script>
+</body>
+</html>
